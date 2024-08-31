@@ -6,7 +6,7 @@ const readline = require('readline');
 
 class CatsAPI {
     constructor() {
-        this.baseURL = 'https://cats-backend-wkejfn-production.up.railway.app';
+        this.baseURL = 'https://cats-backend-cxblew-prod.up.railway.app';
     }
 
     headers(authorization) {

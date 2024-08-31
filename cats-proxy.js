@@ -7,7 +7,7 @@ const { HttpsProxyAgent } = require('https-proxy-agent');
 
 class CatsAPI {
     constructor() {
-        this.baseURL = 'https://cats-backend-wkejfn-production.up.railway.app';
+        this.baseURL = 'https://cats-backend-cxblew-prod.up.railway.app';
         this.proxies = fs.readFileSync('proxy.txt', 'utf8').replace(/\r/g, '').split('\n').filter(Boolean);
     }
 
@@ -144,6 +144,7 @@ class CatsAPI {
                     proxyIP = await this.checkProxyIP(proxy);
                 } catch (error) {
                     this.log(`Không thể kiểm tra IP của proxy: ${error.message}`, 'warning');
+                    continue;
                 }
 
                 try {
